@@ -5,15 +5,9 @@ omits the `/api/v0/` part of the path as it is common to all requests.
 
 ## Signing Requests
 
-Amazon specifies a mechanism for signing its messages which is similar to the
-drafts linked below but takes advantage of headers using the `x-aws-` naming
-scheme. However, the `x-` naming scheme was deprecated in 2012 by
-[RFC 6648](https://tools.ietf.org/html/rfc6648). The draft
-[here](https://tools.ietf.org/html/draft-ietf-httpbis-message-signatures-00)
-specifies a mechanism for signing HTTP messages and builds upon the draft
-[here](https://tools.ietf.org/html/draft-cavage-http-signatures-12). The Ubiq
-platform uses the signing scheme described below, which draws heavily from the
-linked drafts with the goal of maintaining compatibility with updated versions
+The mechanism for Ubiq signing HTTP messages builds upon the draft
+[here](https://tools.ietf.org/html/draft-cavage-http-signatures-12) and the referenced drafts and algorithms. The Ubiq
+platform maintains the goal of retaining compatibility with updated versions
 of the drafts under the assumption that they will eventually become
 standardized.
 
@@ -85,7 +79,7 @@ Content-Type: application/json
                                   all the necessary information (other than
                                   the key) to decrypt the key.
         - `encryption_session` (String):
-                                  A string that identifies this specifc
+                                  A string that identifies this specific
                                   encryption request.
         - `key_fingerprint` (String):
                                   A string that identifies the encrypted
@@ -176,7 +170,7 @@ Content-Type: application/json
                                   all the necessary information (other than
                                   the key) to decrypt the key.
         - `encryption_session` (String):
-                                  A string that identifies this specifc
+                                  A string that identifies this specific
                                   encryption request.
         - `key_fingerprint` (String):
                                   A string that identifies the encrypted
